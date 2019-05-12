@@ -114,4 +114,13 @@ router.get('/AggregateByTitle',(req,res)=>{
         {$match:{published:true}},{$project:{title:1}}
     ], (err,result)=>{res.json(result)})
 })
+
+router.get('/AggregateSorting',(req,res)=>{
+    Book.aggregate([
+        {$match:{published:true}},{$project:{title:1}},{$sort:{title:-1}} , {$limit:5}
+    ], (err,result)=>{res.json(result)})
+})
+
+
+
 module.exports = router;
