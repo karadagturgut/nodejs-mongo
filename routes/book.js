@@ -5,6 +5,8 @@ var router = express.Router();
 
 const Book = require ('../models/Book')
 
+// Router methods 
+
 router.post('/new', function(req, res, next) {
 const book = new Book({
 title:'NODEJS FUNDEMENTALS',
@@ -62,7 +64,7 @@ router.get('/searchAll',  (req, res) => {
    })
 
    router.put('/update',  (req, res) => {
-    Book.findById({published:true},{published:false}, {multi:true} ,(err,data)=>{
+    Book.update({published:true},{published:false}, {multi:true} ,(err,data)=>{
         if(err)
         console.log(err)
        
@@ -70,4 +72,46 @@ router.get('/searchAll',  (req, res) => {
     })
    })
 
+   router.put('/updateByID',  (req, res) => {
+    Book.findByIdAndUpdate('5cd6c29880853d2138e9996a',{title:'Turgutun kitabı'},(err,data)=>{
+        if(err)
+        console.log(err)
+       
+        res.json(data)
+    })
+   })
+router.delete('/remove',(req,res)=>{
+    Book.findByIdAndRemove({published:true},(err,data)=>
+    {   if(err)
+        console.log(err)
+        
+        res.json(data)
+})
+})
+
+
+router.get('/sortByFavs',(req,res)=>{
+    Book.find({},(err,data)=>{
+        res.json(data)
+    }).sort({'meta.favs':1})
+})
+
+router.get('/sortByTitle',(req,res)=>{
+    Book.find({},(err,data)=>{
+        res.json(data)
+    }).sort({'title':1})
+})
+
+// Aggregate
+
+router.get('/Aggregate',(req,res)=>{
+    Book.aggregate([
+        {$match:{published:true}}
+    ], (err,result)=>{res.json(result)})
+})
+router.get('/AggregateByTitle',(req,res)=>{
+    Book.aggregate([
+        {$match:{published:true}},{$project:{title:1}}
+    ], (err,result)=>{res.json(result)})
+})
 module.exports = router;
