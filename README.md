@@ -1,5 +1,5 @@
 # nodejs-mongo
-MongoDB database operations in NodeJS application
+
 
 
 Bu uygulama NoSQL mantığında çalışan MongoDB'nin Node.JS ile beraber kullanım örneğidir. Projede Express Framewok çatısında oluşturuldu ve MongoDB bağlantısı için mongoose kütüphanesi kullanıldı.
