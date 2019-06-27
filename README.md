@@ -4,11 +4,11 @@
 
 Bu uygulama NoSQL mantığında çalışan MongoDB'nin Node.JS ile beraber kullanım örneğidir. Projede Express Framewok çatısında oluşturuldu ve MongoDB bağlantısı için mongoose kütüphanesi kullanıldı.
 
-## Gereksinimler
+
 
 ## Kullanım
 
-`npm start`komutu ile projeyi başlatabilirsiniz. İstekler şu anki durumda, sınıflar içerisinde, default olarak atanmıştır. Metodları test edebilmek için Postman vb. gibi test uygulamaları kullanılabilir. Çalışma başladığında MongoDB bağlantısı otomatik olarak kurulacaktır. 
+`npm start` komutu ile projeyi başlatabilirsiniz. İsteklere bağlı veriler şu anki durumda sınıflar içerisinde, default olarak atanmıştır. Metodları test edebilmek için Postman vb. gibi test uygulamaları kullanılabilir. Çalışma başladığında MongoDB bağlantısı otomatik olarak kurulacaktır. 
 
 Bazı istek örnekleri aşağıda açıklamalarıyla listelenmiştir:
 
