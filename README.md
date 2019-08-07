@@ -18,5 +18,3 @@ Bazı istek örnekleri aşağıda açıklamalarıyla listelenmiştir:
 - _http://localhost:3000/books/searchById_  kitap Id'sine göre arama yapılır ve sonuc json olarak döner. GET request
 - _http://localhost:3000/books/updateById_ istenilen kitap Id'sine göre güncelleme yapılır. Put request.
 - _http://localhost:3000/books/delete2_ _findOneAndRemove_ methodu ile Id' bazlı arama yapılıp silme işlemi gerçekleştirilebilir. Delete request
-- _http://localhost:3000/books/aggregate_ çeşitli gruplama yöntemleri ile veriler listelenir. Get request
-- _http://localhost:3000/books/aggregate-lookup_ collection'lar arasında join işlemi ile listeleme yapılmak için kullanılır. Get request
