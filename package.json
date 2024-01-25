@@ -11,7 +11,7 @@
     "express": "^4.17.3",
     "http-errors": "^1.6.3",
     "jade": "~1.11.0",
-    "mongoose": "^5.5.7",
+    "mongoose": "^5.13.20",
     "morgan": "^1.9.1"
   }
 }
